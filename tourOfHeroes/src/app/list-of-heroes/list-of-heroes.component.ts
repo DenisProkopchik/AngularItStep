@@ -9,7 +9,21 @@ import { heroes } from '../mock-heroes';
   styleUrls: ['./list-of-heroes.component.scss']
 })
 export class ListOfHeroesComponent implements OnInit {
+  public flag: boolean = false;
+  public heroName: string;
+  choose(event) {
+    let target = event.target;
 
+    if (target.parentNode.className === "hero--items--block" || target.className === 'hero--items--block') {
+      target.tagName === "SPAN" ? target = target.parentNode : null;
+      this.flag = true;
+      this.heroName = target.lastChild.textContent;
+    }
+    // } else {
+    //   this.flag = false;
+    //   this.heroName = '';
+    // }
+  }
   constructor() { }
 
   ngOnInit(): void {
