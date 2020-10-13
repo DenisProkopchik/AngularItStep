@@ -1,0 +1,12 @@
+<div class="list--wrapper">
+  <h2>
+    Top the strongest Heroes
+  </h2>
+  <div class="hero--items--block">
+    <div class="hero--items--name" *ngFor="let hero of heroes" [id]="hero.id">
+      <div>
+        {{hero.name}}
+      </div>
+    </div>
+  </div>
+</div>

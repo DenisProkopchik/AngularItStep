@@ -1,0 +1,34 @@
+@import'../scss/case.scss';
+
+.list--wrapper{
+  width: $contentWidth;
+  margin: auto;
+  h2{
+    @extend %title;
+  }
+}
+.hero--items--block{
+  @extend %text;
+  display: flex;
+  justify-content: space-between;
+  width: $contentWidth;
+  background-color: #fff;
+  border: 2px solid $primeryColorLight;
+  border-radius: 6px;
+  margin: 5px 0;
+  .hero--items--id{
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    background-color: $primeryColorLight;
+    border-right: 2px solid $primeryColorLight;
+  }
+  .hero--items--name{
+    padding: 10px;
+    width: 60%;
+  }
+}
+.hero--items--block:hover{
+  cursor: pointer;
+  background-color: $primeryColorLight;
+}

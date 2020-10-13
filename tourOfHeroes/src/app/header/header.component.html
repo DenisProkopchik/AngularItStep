@@ -1,0 +1,13 @@
+<header class="header--top">
+  <h1 class="header--pageName">
+    Tour of Heroes
+  </h1>
+  <nav class="header--nav">
+    <a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      Dashboard
+    </a>
+    <a [routerLink]="['/heroes']" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+      Heroes
+    </a>
+  </nav>
+</header>

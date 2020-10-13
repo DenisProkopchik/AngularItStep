@@ -1,0 +1,28 @@
+@import '../scss/case.scss';
+
+.list--wrapper{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  h2{
+    @extend %title;
+  }
+}
+.hero--items--block{
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 100px 100px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  .hero--items--name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $mainColor;
+    border-radius: 5px;
+  }
+  .hero--items--name:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); 
+  }
+}

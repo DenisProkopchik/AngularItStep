@@ -1,0 +1,25 @@
+$titleColor:#545454;
+$textColorDark:#4C4C4C;
+$italicTextColor:#B2B2B2;
+$buttonColor:#292929;
+$startBGC:#211F20;
+$startRadialColor:#5B483A;
+$mainColor:#CDCDCD;
+$primeryColorDark:#F1CDB3;
+$primeryColorLight:#FDDCC4;
+$whiteBackgroundI:#F6F6F6;
+$whiteBackgroundS:#FAFAFA;
+$contentWidth: 170px;
+$Georgia: Georgia, 'Times New Roman', Times, serif;
+
+%title{
+  color: $titleColor;
+  font-family: $Georgia;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+%text{
+	font-weight: 400;
+	color: $textColorDark;
+	line-height: 160%;
+}
