@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "tourOfHeroes"
+    }
+  },
+  "defaultProject": "tourOfHeroes",
+  "cli": {
+    "analytics": "278b24bc-eac6-442b-9910-de227d7c6ff5"
+  }
 }
