@@ -20,8 +20,6 @@
     width: 30%;
     padding: 10px;
     text-align: center;
-    background-color: $primeryColorLight;
-    border-right: 2px solid $primeryColorLight;
   }
   .hero--items--name{
     padding: 10px;
@@ -30,5 +28,34 @@
 }
 .hero--items--block:hover{
   cursor: pointer;
+  border-color: $primeryColorLight;
   background-color: $primeryColorLight;
+}
+.activeHero{
+  border-color: $primeryColorDark;
+  background-color: $primeryColorDark;
+}
+.hero--choosed{
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  .hero--choosed--name{
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  &, button{
+    @extend %text;
+  }
+  button{
+    padding: 5 10px;
+    outline: none;
+    border: 2px solid $mainColor;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  button:hover{
+    cursor: pointer;
+    background-color: $mainColor;
+  }
 }

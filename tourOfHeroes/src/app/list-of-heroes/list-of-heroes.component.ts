@@ -10,24 +10,22 @@ import { heroes } from '../mock-heroes';
 })
 export class ListOfHeroesComponent implements OnInit {
   public flag: boolean = false;
-  public heroName: string;
+  public yourHero;
+  public heroes: Hero[] = heroes.sort((a, b) => a.id - b.id);
+
   choose(event) {
     let target = event.target;
 
     if (target.parentNode.className === "hero--items--block" || target.className === 'hero--items--block') {
       target.tagName === "SPAN" ? target = target.parentNode : null;
       this.flag = true;
-      this.heroName = target.lastChild.textContent;
+      this.yourHero = this.heroes.find(item => item.id === Number(target.firstChild.textContent));
     }
-    // } else {
-    //   this.flag = false;
-    //   this.heroName = '';
-    // }
   }
+
   constructor() { }
 
   ngOnInit(): void {
 
   }
-  public heroes: Hero[] = heroes.sort((a, b) => a.id - b.id);
 } 
