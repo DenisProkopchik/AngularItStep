@@ -20,6 +20,9 @@ export class ListOfHeroesComponent implements OnInit {
       target.tagName === "SPAN" ? target = target.parentNode : null;
       this.flag = true;
       this.yourHero = this.heroes.find(item => item.id === Number(target.firstChild.textContent));
+    } else if (target.className === 'hero--choosed--remove') {
+      this.flag = !this.flag;
+      this.yourHero = undefined;
     }
   }
 
