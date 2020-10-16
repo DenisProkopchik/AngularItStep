@@ -10,18 +10,29 @@
     font-family: $Georgia;
   }
   .header--nav{
+    display: flex;
     a{
+      display: block;
       color: $italicTextColor;
       text-decoration: none;
-      border: 2px solid transparent;
+      text-align: center;
+      padding: 10px 0;
+      width: 120px;
       margin-right: 10px;
+      background-image: linear-gradient($primeryColorLight, $primeryColorLight);
+      background-size: 0 3px, auto;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      transition: all .2s ease-out;
     }
     a:hover{
       color: #fff;
+      background-size: 100% 3px, auto;
     }
     .active{
       color: #fff;
-      border-bottom: 2px solid $primeryColorDark;
+      background-image: linear-gradient($primeryColorDark, $primeryColorDark);
+      background-size: 100% 3px, auto;
     }
   }
 }

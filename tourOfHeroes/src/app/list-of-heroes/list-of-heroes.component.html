@@ -15,7 +15,7 @@
     <div class="hero--choosed--name">
       {{yourHero.name.toUpperCase()}} is my hero
     </div>
-    <button>
+    <button [routerLink]="['/details', yourHero.id]">
       View details
     </button>
     <button class="hero--choosed--remove">

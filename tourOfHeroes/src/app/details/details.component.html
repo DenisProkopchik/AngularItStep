@@ -1,0 +1,14 @@
+<div *ngIf="hero">
+  <div>
+    <input type="text" [(ngModel)]="hero.name" />
+  </div>
+  <div>
+    {{hero.details}}
+  </div>
+  <div>
+    id: {{hero.id}}
+  </div>
+  <div>
+    power: {{hero.power}}
+  </div>
+</div>
