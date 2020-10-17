@@ -48,14 +48,9 @@
     @extend %text;
   }
   button{
-    padding: 5 10px;
-    outline: none;
-    border: 2px solid $mainColor;
-    border-radius: 5px;
-    background-color: #fff;
+    @extend %button;
   }
   button:hover{
-    cursor: pointer;
-    background-color: $mainColor;
+    @extend %buttonHover;
   }
 }

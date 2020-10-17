@@ -23,3 +23,14 @@ $Georgia: Georgia, 'Times New Roman', Times, serif;
 	color: $textColorDark;
 	line-height: 160%;
 }
+%button{
+  padding: 5 10px;
+  outline: none;
+  border: 2px solid $mainColor;
+  border-radius: 5px;
+  background-color: #fff;
+}
+%buttonHover{
+  cursor: pointer;
+  background-color: $mainColor;
+}

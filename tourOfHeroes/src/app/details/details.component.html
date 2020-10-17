@@ -1,14 +1,34 @@
-<div *ngIf="hero">
-  <div>
-    <input type="text" [(ngModel)]="hero.name" />
-  </div>
-  <div>
-    {{hero.details}}
-  </div>
-  <div>
-    id: {{hero.id}}
-  </div>
-  <div>
-    power: {{hero.power}}
-  </div>
+<div class="details--wrapper" *ngIf="hero">
+  <h2>
+    {{hero.name}}: <span>{{hero.details}}!</span>
+  </h2>
+  <table>
+    <tr>
+      <td class="details--first--column">
+        name:
+      </td>
+      <td>
+        <input type="text" [(ngModel)]="hero.name" />
+      </td>
+    </tr>
+    <tr>
+      <td class="details--first--column">
+        id:
+      </td>
+      <td>
+        {{hero.id}}
+      </td>
+    </tr>
+    <tr>
+      <td class="details--first--column">
+        power:
+      </td>
+      <td>
+        {{hero.power}}
+      </td>
+    </tr>
+  </table>
+  <button (click)="goToBackPage()">
+    Back
+  </button>
 </div>

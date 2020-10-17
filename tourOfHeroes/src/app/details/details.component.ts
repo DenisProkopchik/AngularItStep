@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
 
 import { Hero } from '../interfaces/Hero';
 import { heroes } from '../mock-heroes';
@@ -15,11 +16,16 @@ export class DetailsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private _location: Location
   ) { }
 
   ngOnInit(): void {
     let id = +this.route.snapshot.paramMap.get('hero.id') - 1;
     this.hero = heroes[id];
     console.log(this.hero);
+  }
+
+  goToBackPage() {
+    this._location.back();
   }
 }
